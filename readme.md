@@ -197,8 +197,4 @@ Abrir en navegador:
 -   Implementar hashing de contraseñas
 -   Agregar roles (User / Organizer / Admin)
 -   Transferencia de tickets
--   Encabezados de seguridad HTTP
 -   Validación centralizada
--   Registro de auditoría
--   Migración a SQLite
--   Pruebas unitarias
