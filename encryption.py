@@ -159,7 +159,7 @@ if __name__ == "__main__":
     print("Texto cifrado:", texto_cifrado)
     print("Nonce:", nonce)
     print("Tag:", tag)
-    print("Texto cifrado:", decrypt_aes(texto_cifrado, nonce, tag, clave))
+    print("Texto descifrado:", decrypt_aes(texto_cifrado, nonce, tag, clave))
     # Cuando implementen decrypt_aes, esto debe funcionar
     # texto_descifrado = decrypt_aes(texto_cifrado, nonce, tag, clave)
     # print("Texto descifrado:", texto_descifrado)
