@@ -62,14 +62,19 @@ def decrypt_aes(texto_cifrado_hex, nonce_hex, tag_hex, clave):
     """
 
     # TODO: Implementar conversión de hex a bytes
+    text= bytes.fromhex(texto_cifrado_hex)
+    nonce= bytes.fromhex(nonce_hex)
+    tag= bytes.fromhex(tag_hex)
+    _clave = clave
 
     # TODO: Crear objeto AES con nonce
-
+    cipher = AES.new(_clave, AES.MODE_EAX, nonce=nonce)
     # TODO: Usar decrypt_and_verify
-
+    text = cipher.decrypt_and_verify(text, tag)
+    if not text:
+        return("Error: No se pudo descifrar o la integridad no se verificó.")
     # TODO: Convertir resultado a string y retornar
-
-    pass
+    return text.decode()
 
 # ==========================================================
 # PASSWORD HASHING (PBKDF2 - SHA256)
